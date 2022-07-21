@@ -6,4 +6,4 @@ Console.WriteLine("Hello, World!");
 
 BloomTest.Test();
 
-var summary = BenchmarkRunner.Run(typeof(SimpleHash));
+//var summary = BenchmarkRunner.Run(typeof(SimpleHash));

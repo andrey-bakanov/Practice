@@ -28,6 +28,11 @@ namespace ConsoleApp.Algorithms.Lists
                 _head = item;
                 _last = item;
             }
+            else
+            {
+                _last.Next = item;
+                _last = item;
+            }
         }
 
         public void Clear()
@@ -37,7 +42,23 @@ namespace ConsoleApp.Algorithms.Lists
 
         public bool Contains(LinkedNode<T> item)
         {
-            throw new NotImplementedException();
+            if(_head == null)
+            {
+                return false;
+            }
+            LinkedNode<T> current = _head;
+            while (current.Next != null)
+            {
+                if (current == item)
+                {
+                    return true;
+                    break;
+                }
+
+                current = current.Next;
+            }
+
+            return false;
         }
 
         public void CopyTo(LinkedNode<T>[] array, int arrayIndex)
@@ -47,7 +68,13 @@ namespace ConsoleApp.Algorithms.Lists
 
         public IEnumerator<LinkedNode<T>> GetEnumerator()
         {
-            throw new NotImplementedException();
+            LinkedNode<T> node = _head;
+            while (node != null)
+            {
+                yield return node;
+
+                node = node.Next;
+            }
         }
 
         public int IndexOf(LinkedNode<T> item)

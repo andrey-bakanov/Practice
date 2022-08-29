@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace ConsoleApp.Problems
@@ -22,49 +23,64 @@ namespace ConsoleApp.Problems
 		private static int DoTrapWater(int[] array)
         {
 			int result = 0;
-			int prevMax = 0;
-			int serieLength = 0;
-			bool direction = true;
+			int leftMax = 0;
+			int rightMax = 0;
 
-			for(int i =0; i < array.Length; i++)
+			int[] maxLeftItems = new int[array.Length];
+			int[] maxRightItems = new int[array.Length];
+			int[] items = new int[array.Length];
+			for (int i = 1; i < array.Length; i++)
             {
-				//идем направо и накапливаем
-				if (array[i] >= prevMax && direction)
-				{
-					prevMax = array[i];
-				}
-				else if (array[i] < prevMax && direction)
-				{
-					//переломный момент - идем вниз
-					direction = false;
-					serieLength = 1;
-					result += prevMax - array[i];
-				}
-				else if (array[i] > prevMax && !direction)
-				{
-					serieLength++;
-					result += prevMax - array[i];
-					prevMax = array[i];
-					serieLength = 0;
-					direction = true;
+				int current = array[i];
+				int localresult = 0; ;
 
-				}
-				else if (array[i] <= prevMax && !direction)
+				if (current >= leftMax )
 				{
-					serieLength++;
-					result += prevMax - array[i];
+					leftMax = current;
 				}
-
-				if(i == array.Length - 1)
-                {
-					if(array[i] <= prevMax);
-
+				else if (current < leftMax )
+				{
+					localresult = leftMax - current;
 				}
+				maxLeftItems[i] = localresult;
 
-				Console.WriteLine($"i={i}; a[i]={array[i]}; result={result}; prevMax={prevMax}; serieLength={serieLength}");
+				localresult = 0;
+				int j = array.Length - i;
+				int currentRight = array[j];
+
+				if (currentRight >= rightMax)
+				{
+					rightMax = currentRight;
+				}
+				else if (currentRight < rightMax)
+				{
+					localresult = rightMax - currentRight;
+				}
+				maxRightItems[j] = localresult;
+
+				
+
+				Console.WriteLine($"i={i}; a[i]={array[i]}; result={result}; prevMax={leftMax};");
 			}
 
-			return result;
+			for (int i = 1; i < array.Length; i++)
+			{
+				items[i] = Math.Min(maxLeftItems[i], maxRightItems[i]);
+			}
+
+			Console.WriteLine(JsonSerializer.SerializeToNode(maxLeftItems).ToJsonString());
+			Console.WriteLine(JsonSerializer.SerializeToNode(maxRightItems).ToJsonString());
+			Console.WriteLine(JsonSerializer.SerializeToNode(items).ToJsonString());
+			return items.Sum();
         }
+
+		private static int DoTrapWater2(int[] array)
+		{
+			int result = 0;
+			int leftMax = 0;
+			int rightMax = 0;
+
+			return result;
+		}
 	}
 }

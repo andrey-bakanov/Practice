@@ -22,8 +22,37 @@ Console.WriteLine("Hello, World!");
 //DFS.Run();
 
 
-BinarySearch.Run();
+//BinarySearch.Run();
 
 //TrapWater.Run();
+
+//SumOf2Nearest.Run();
+
+//NearestGreatest.Run();
+
+//FizzBuzz.Run();
+
+//FindCerebrity.Run();
+
+var target = new ConsoleApp.Algorithms.Lists.LinkedNode<int>() { Value = 3 };
+ConsoleApp.Algorithms.Lists.LinkedList<int> list = new ConsoleApp.Algorithms.Lists.LinkedList<int>();
+list.Add(new ConsoleApp.Algorithms.Lists.LinkedNode<int>() { Value = 1 });
+list.Add(new ConsoleApp.Algorithms.Lists.LinkedNode<int>() { Value = 2 });
+list.Add(target);
+list.Add(new ConsoleApp.Algorithms.Lists.LinkedNode<int>() { Value = 4 }); 
+list.Add(new ConsoleApp.Algorithms.Lists.LinkedNode<int>() { Value = 5 });
+
+Console.WriteLine(list.Contains(target));
+foreach (var l in list)
+    Console.WriteLine(l.Value);
+
+
+FindMaxLetter.Run();
+
+
+GetMaxBranchSum.Run();
+
+
+LongestIncreasingSubsequence.Run();
 
 Console.Read();

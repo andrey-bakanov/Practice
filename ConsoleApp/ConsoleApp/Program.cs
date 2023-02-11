@@ -5,7 +5,11 @@ using ConsoleApp.Algorithms.Sorting;
 using ConsoleApp.Algorithms.WalkGraph;
 using ConsoleApp.Bloom;
 using ConsoleApp.Problems;
+using ConsoleApp.Problems.Easy;
+using ConsoleApp.Problems.Medium;
+using ConsoleApp.TestTasks;
 
+Console.OutputEncoding = System.Text.Encoding.UTF8;
 Console.WriteLine("Hello, World!");
 
 //BloomTest.Test();
@@ -22,7 +26,7 @@ Console.WriteLine("Hello, World!");
 //DFS.Run();
 
 
-//BinarySearch.Run();
+BinarySearch.Run();
 
 //TrapWater.Run();
 
@@ -34,25 +38,59 @@ Console.WriteLine("Hello, World!");
 
 //FindCerebrity.Run();
 
-var target = new ConsoleApp.Algorithms.Lists.LinkedNode<int>() { Value = 3 };
-ConsoleApp.Algorithms.Lists.LinkedList<int> list = new ConsoleApp.Algorithms.Lists.LinkedList<int>();
-list.Add(new ConsoleApp.Algorithms.Lists.LinkedNode<int>() { Value = 1 });
-list.Add(new ConsoleApp.Algorithms.Lists.LinkedNode<int>() { Value = 2 });
-list.Add(target);
-list.Add(new ConsoleApp.Algorithms.Lists.LinkedNode<int>() { Value = 4 }); 
-list.Add(new ConsoleApp.Algorithms.Lists.LinkedNode<int>() { Value = 5 });
+//var target = new ConsoleApp.Algorithms.Lists.LinkedNode<int>() { Value = 3 };
+//ConsoleApp.Algorithms.Lists.LinkedList<int> list = new ConsoleApp.Algorithms.Lists.LinkedList<int>();
+//list.Add(new ConsoleApp.Algorithms.Lists.LinkedNode<int>() { Value = 1 });
+//list.Add(new ConsoleApp.Algorithms.Lists.LinkedNode<int>() { Value = 2 });
+//list.Add(target);
+//list.Add(new ConsoleApp.Algorithms.Lists.LinkedNode<int>() { Value = 4 }); 
+//list.Add(new ConsoleApp.Algorithms.Lists.LinkedNode<int>() { Value = 5 });
 
-Console.WriteLine(list.Contains(target));
-foreach (var l in list)
-    Console.WriteLine(l.Value);
-
-
-FindMaxLetter.Run();
+//Console.WriteLine(list.Contains(target));
+//foreach (var l in list)
+//    Console.WriteLine(l.Value);
 
 
-GetMaxBranchSum.Run();
+//FindMaxLetter.Run();
 
 
-LongestIncreasingSubsequence.Run();
+//GetMaxBranchSum.Run();
+
+
+//LongestIncreasingSubsequence.Run();
+
+
+//PallindromeString.Run();
+//PallindromeNumber.Run();
+
+
+//ReverseArray.Run();
+
+//SumOfLeafs.Run();
+
+
+//MaxArraySequence.Run();
+
+//PallindromeLongestSubstring.Run();
+
+//MaxSubArraySumOfSizeN.Run();
+
+
+//FindFirstNotRepeatingCharacter.Run();
+
+//FindAllDuplicatesInArray.Run();
+
+
+//Fibonachi.Run();
+
+
+//ArrayToBinaryTree.Run();
+
+
+Test1.Run();
+
+//Anagram.Run();
+
+NumberOfGoodWaysToSplitString.Run();
 
 Console.Read();

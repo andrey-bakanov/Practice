@@ -1,9 +1,9 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace ConsoleApp.Problems
@@ -20,7 +20,7 @@ namespace ConsoleApp.Problems
 			int[] resultArray = SumOfTwo(array, target);
 
 			sw.Stop();
-			Console.WriteLine(sw.ElapsedMilliseconds +  " -> " + JsonConvert.SerializeObject(resultArray));
+			Console.WriteLine(sw.ElapsedMilliseconds +  " -> " + JsonSerializer.Serialize(resultArray));
 		}
 
 

@@ -8,6 +8,7 @@ using ConsoleApp.Problems;
 using ConsoleApp.Problems.Easy;
 using ConsoleApp.Problems.Medium;
 using ConsoleApp.TestTasks;
+using ConsoleApp.Tasks;
 
 Console.OutputEncoding = System.Text.Encoding.UTF8;
 Console.WriteLine("Hello, World!");
@@ -94,3 +95,8 @@ Test1.Run();
 NumberOfGoodWaysToSplitString.Run();
 
 Console.Read();
+
+
+
+MergeLists lists = new MergeLists();
+lists.Execute();

@@ -5,13 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 using System;
-using Microsoft.AspNetCore.Mvc;
 using System.Data;
-using System.Web.Mvc;
 
 namespace EmployeeManager
 {
-    public class SalaryController : Controller
+    public class SalaryController 
     {
         /*
         [System.Web.Mvc.HttpGet("api/salary/ChangeSalary")] //method

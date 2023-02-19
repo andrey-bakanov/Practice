@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System;
-using Newtonsoft.Json;
+using System.Text.Json;
 
 namespace ConsoleApp.Problems
 {
@@ -18,7 +18,7 @@ namespace ConsoleApp.Problems
 
 			int[] result = SumOfThree(array, target);
 
-			Console.WriteLine(JsonConvert.SerializeObject(result));
+			Console.WriteLine(JsonSerializer.Serialize(result));
 		}
 
 

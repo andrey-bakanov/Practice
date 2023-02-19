@@ -4,8 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp.Tasks
+namespace ConsoleApp.Problems.Easy
 {
+    /*
+     OZON
+     */
     internal class MergeLists
     {
         public void Execute()
@@ -60,7 +63,7 @@ namespace ConsoleApp.Tasks
 
             }
 
-            if(current1 != null)
+            if (current1 != null)
             {
                 while (current1 != null)
                 {
@@ -80,7 +83,7 @@ namespace ConsoleApp.Tasks
 
 
             var node = result.First;
-            while(node != null)
+            while (node != null)
             {
                 Console.WriteLine(node.Value);
                 node = node.Next;

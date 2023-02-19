@@ -8,7 +8,6 @@ using ConsoleApp.Problems;
 using ConsoleApp.Problems.Easy;
 using ConsoleApp.Problems.Medium;
 using ConsoleApp.TestTasks;
-using ConsoleApp.Tasks;
 
 Console.OutputEncoding = System.Text.Encoding.UTF8;
 Console.WriteLine("Hello, World!");
@@ -94,9 +93,28 @@ Test1.Run();
 
 NumberOfGoodWaysToSplitString.Run();
 
+
+
+
+
+//MergeLists lists = new MergeLists();
+//MergeListsN lists = new MergeListsN();
+//lists.Execute();
+
+//SearchInSortedMatrix sorter = new SearchInSortedMatrix();
+//sorter.Execute();
+
+//MatrixIslands matrixIslands = new MatrixIslands();
+//matrixIslands.Execute();
+
+ArrayIntersection sect1 = new ArrayIntersection();
+sect1.Execute();
+
+ArrayRotation rotation1 = new ArrayRotation();
+rotation1.Execute();
+
+
+SquareOfSortedArray sq = new SquareOfSortedArray();
+sq.Execute();
+
 Console.Read();
-
-
-
-MergeLists lists = new MergeLists();
-lists.Execute();
